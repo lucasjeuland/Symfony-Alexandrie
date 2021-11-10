@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}S'inscrire{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/forms/forms.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/forms/signUp.css') }}" />
+
+{% endblock %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block content %}
+
+    <div class="signUp-content">
+        <h1>S'inscrire</h1>
+        {{ form_start(form) }}
+            {{ form_row(form.username) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.passwordHash) }}
+            <button type="submit">Valider</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

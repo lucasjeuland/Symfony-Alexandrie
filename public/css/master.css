@@ -1,0 +1,51 @@
+:root {
+    --main-bg-color: #F1F6F9;
+    --secondary-bg-color: #14274E;
+}
+
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: SansSerif, OpenSans, "Roboto Light", system-ui;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header, footer {
+    background-color: var(--secondary-bg-color);
+    color: white;
+    padding: 1em 0;
+    flex-shrink: 0;
+}
+
+footer {
+    color: grey;
+}
+
+.home-a {
+    text-decoration: none;
+    color: inherit;
+}
+

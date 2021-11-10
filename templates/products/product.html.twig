@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ productName }}{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/products/product.css') }}" />
+{% endblock %}
+
+{% block content %}
+    <div class="product">
+        <img src="{{ asset('img/products/product_'~code~'.jpg') }}" onerror="this.src='{{ asset("img/placeholder_240x273.png") }}'" alt="{{ productName }}">
+        <div class="product-info">
+            <h3>{{ productName }}</h3> <br>
+            <p>{{ description }}</p>
+            <ul>
+                <li>Dimensions : {{ dimensions }}</li>
+                <li>Couleur : {{ color }}</li>
+            </ul>
+
+            <div class="price-line">
+                <p class="price-tag">{{ price }}€</p>
+                <button>Acheter</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

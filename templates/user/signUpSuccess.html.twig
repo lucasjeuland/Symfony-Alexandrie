@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Bravo !{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/forms/forms.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/forms/signUp.css') }}" />
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="signUp-content">
+        <h1>Bravo ! Vous êtes inscrit !</h1>
+        <button>Voir les produits</button>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Products{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/products/products.css') }}" />
+{% endblock %}
+
+{% block content %}
+
+    <div class="products">
+
+        {% for product in products %}
+            <div class="product-card">
+                <img src="{{ asset('img/products/product_'~product.code~'.jpg') }}" onerror="this.src='{{ asset("img/placeholder_240x273.png") }}'" alt="product_{{ product.id }}">
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3> <br>
+                    <div class="price-line">
+                        <p>{{ product.price }} €</p>
+                        <a href="{{ path('products_show', {productId: product.id}) }}"><button>Acheter</button></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

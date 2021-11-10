@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+{% endblock %}
+
+{% block content %}
+    <div class="home-content">
+        <h1>Hello {{ name }} ! </h1>
+        <a href="{{ path('user_sign_up') }}"><button>Start Shopping</button></a>
+    </div>
+
+{% endblock %}

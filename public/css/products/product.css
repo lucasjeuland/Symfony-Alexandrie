@@ -1,0 +1,32 @@
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.product > * {
+    padding: 1em;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info > * {
+    margin-top: 1em;
+}
+
+ul {
+    padding-left: 3em;
+}
+
+.price-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-tag {
+    font-size: 2rem;
+}
